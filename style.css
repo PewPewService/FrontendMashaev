@@ -1,0 +1,117 @@
+body{
+	background: AliceBlue;
+	padding: 55px 55px 55px 55px;
+}
+
+.site-body{
+	width:100%;
+	height:100%;
+	background: Gainsboro;
+	position:center;
+	border-radius: 40px 40px 40px 40px;
+}
+
+.site-nav{
+	width:7%;
+	height:100%;
+	background: orange;
+	position:left;
+	float:left;
+	border-radius: 40px 0px 0px 40px;
+}
+
+.site-main{
+	padding: 30px;
+	width:93%;
+	height:100%;
+}
+
+.img{
+	padding:15%;
+	opacity:0.75;
+}
+
+.img:hover{
+	opacity:1;
+}
+
+.img-clicked{
+	opacity:1;
+}
+
+.block{
+	width: 30%;
+	height:25%;
+	overflow:hidden;
+	box-shadow: 0 0 10px black;
+	border-radius:10px 10px 10px 10px;
+	background: white;
+	margin-left: 10%;
+}
+
+.block-text{
+	margin:0% 3% 3% 3%;
+	font-size:16px;
+}
+
+
+ul{
+	font-size:20px;
+}
+
+button{
+	display:inline;
+	float:right;
+	border-radius:10px 10px 10px 10px;
+	width:20%;
+	height:10%;
+}
+
+h3{
+	display:inline;
+}
+
+.left{
+	color:blue;
+	float:left;
+	width:40%;
+}
+
+.right{
+	float:left;
+}
+
+.planet{
+	width:400px;
+	height:400px;
+	background-image:url(img/planet.svg);
+	background-repeat:no-repeat;
+	position:right;
+	float:right;
+	display:inline;
+	border-radius: 0px 40px 0px 0px;
+}
+
+.rocket{
+	width:400px;
+	height:400px;
+	margin-left:100px;
+	margin-top:180px;
+	background-image:url(img/rocket.svg);
+	background-repeat:no-repeat;
+	position:right;
+	float:right;
+	display:absolute;
+}
+
+.main-text{
+	padding:20px 200px;
+}
+
+.page{
+	
+}
+
+.page-blocked{
+	display:none;
+}

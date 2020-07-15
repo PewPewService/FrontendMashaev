@@ -1,17 +1,18 @@
 <html>
 	<head>
 		<title> Space Oddity </title>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src='script.js'></script>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 	
 	<body>
 		<div class="site-body">
 			<nav class="site-nav">
-				<p><img class="img img-clicked" src="img/1.svg" onclick="opChange(0)"></p>
-				<p><img class="img" src="img/2.svg" onclick="opChange(1)"></p>
-				<p><img class="img" src="img/3.svg" onclick="opChange(2)"></p>
-				<p><img class="img" src="img/4.svg" onclick="opChange(3)"></p>
+				<p><img class="navimg navimg-clicked" src="img/1.svg"></p>
+				<p><img class="navimg" src="img/2.svg"></p>
+				<p><img class="navimg" src="img/3.svg"></p>
+				<p><img class="navimg" src="img/4.svg"></p>
 			</nav>
 			
 			
@@ -22,17 +23,18 @@
 					<div class="block">
 						<div class="block-text">
 							<br><h3>Статус</h3>
-							<button>Поехали!</button>
+							<button class="goBtn">Поехали!</button>
 						</div>
 						<hr>
-						<ul>
-							<li> Ракета выбрана </li>
-							<li> Команда собрана </li>
-							<li> Погода - ок </li>
+						<ul class="stats">
+							<li >Ракета выбрана</li>
+							<li class="undone">Команда собрана </li>
+							<li class="done">Погода - ок </li>
 						</ul>
+						
 					</div>
 						<div class="rocket">
-						</div><br><br>
+						</div>
 					
 					
 					<div class="block">
@@ -41,23 +43,24 @@
 						</div>
 						<hr>
 						<div class="block-text">
-							<text class="left">Локация</text><text class="right">Космодром Северный</text><br><hr> 
-							<text class="left">Температура</text><text class="right">+15</text> <br><hr> 
-							<text class="left">Влажность</text><text class="right">Слава</text> <br><hr> 
-							<text class="left">Ветер</text><text class="right">5 м\с, СЗ</text>
+							<span class="left">Локация</span><span class="right">Космодром Северный</span><br><hr> 
+							<span class="left">Температура</span><span class="right">+15</span> <br><hr> 
+							<span class="left">Влажность</span><span class="right">Слава</span> <br><hr> 
+							<span class="left">Ветер</span><span class="right">5 м\с, СЗ</span>
 						</div>
-					</div><br><br>
+					</div>
 					
 					<div class="block">
 						<div class="block-text">
 							<br><h3>Экипаж</h3>
 						</div> <hr>
 						
+						
 						<div class="block-text">
-							<text class="left" style="color:red;">Капитан</text><text class="right">Константин Константинопольский</text><br><hr> 
-							<text class="left" style="color:orange;">Борт инженер</text><text class="right">Иван Иванов</text><br><hr> 
-							<text class="left" style="color:green;">Врач</text><text class="right">Петр Петров</text><br><hr> 
-							<text class="left"">Космодесантник</text><text class="right">Анастасия Преображенская</text>
+							<span class="left captain">Капитан</span><span class="right">Константин Константинопольский</span><br><hr> 
+							<span class="left engineer">Борт инженер</span><span class="right">Иван Иванов</span><br><hr> 
+							<span class="left doctor">Врач</span><span class="right">Петр Петров</span><br><hr> 
+							<span class="left marine">Космодесантник</span><span class="right">Анастасия Преображенская</span>
 							
 						</div>
 						
@@ -80,5 +83,7 @@
 			
 			
 		</div>
+		<script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src='script.js'></script>
 	</body>
 </html>

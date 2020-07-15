@@ -1,12 +1,25 @@
-function opChange(num){
-	let am = document.getElementsByClassName("img");
-	let pgs = document.getElementsByClassName("page");
-	for (let i=0; i<am.length; i++){
-		am[i].className="img";
-		pgs[i].className="page page-blocked";
-	}
-	am[num].className="img img-clicked";
-	pgs[num].className="page"
-	
-	
+var menus = document.querySelectorAll(".navimg");
+var contents = document.querySelectorAll(".page");
+
+$(document).ready(function(){
+    contents[0].style.display='block';
+    
+    menus.forEach(
+        function(currentValue) {
+            currentValue.addEventListener("click", showPage);
+        }   
+    );
+});
+
+function showPage(){
+    document.querySelector(".navimg-clicked").classList.remove("navimg-clicked");  
+    this.classList.add("navimg-clicked");
+                    
+    var ind  = Array.prototype.indexOf.call(menus, this);
+    contents.forEach(
+        function(currentValue){
+            currentValue.style.display = "none";
+        }
+    );
+    contents[ind].style.display = "block";
 }

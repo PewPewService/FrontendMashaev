@@ -1,0 +1,408 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-image:url(img/background.svg);
+	padding-top:30px;
+	padding-left:350px;
+}
+
+fieldset{
+	border:0px;
+}
+
+.site-body{
+	width:1200px;
+	height:850px;
+	background: #F4F6F9;
+	border-radius: 40px 40px 40px 40px;
+}
+
+.site-nav{
+	width:7%;
+	height:100%;
+	background: #FF5800;
+	float:left;
+	border-radius: 40px 0px 0px 40px;
+	display:inline;
+}
+
+.site-main{
+	width:93%;
+	height:100%;
+    float:right;
+    display:inline;
+}
+
+
+.navimg{
+	padding:10%;
+	opacity:0.75;
+}
+
+.navimg:hover{
+	opacity:1;
+}
+
+.navimg-clicked{
+	opacity:1;
+}
+
+.block{
+	width: 96%;
+	overflow:hidden;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	border-radius:10px 10px 10px 10px;
+	background: white;
+	margin-left: 2%;
+	margin-top: 30px;
+}
+.block-ship{
+	width: 45%;
+	display:inline-block;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	border: 1px black solid;
+}
+
+
+.block-text{
+	margin:0% 3% 3% 3%;
+	font-size:16px;
+	display:block;
+}
+
+.block-list{
+	display: inline-grid;
+	width: 100%;
+}
+
+.block-list-rocket{
+	float:right;
+	display: inline-grid;
+	width: 60%;
+}
+
+.underline{
+	border-bottom: 1px solid #D8DCE3;
+}
+
+.margin{
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+ul{
+	font-size:20px;
+}
+
+.stats li{
+	list-style-image: url("img/red.svg");
+}
+
+.stats li:last-child{
+	list-style-image: url("img/green.svg");
+}
+
+.inactiveBtn{
+	background: #E4E4E4;
+	float:right;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	border:none;
+	height:25px;
+	width:30%;
+}
+
+.activeBtn{
+	width: 30%;
+	float:right;
+	background-color: #73E24D;
+	border-radius: 10px;
+	border: none;
+	height: 25px;
+        color:#FFF;
+}
+
+h3{
+	display:inline;
+}
+
+.left-text{
+	color:#0A5499;
+	float:left;
+	width:40%;
+}
+
+.right-text{
+	float:left;
+}
+
+.captain{
+	color: #FF7D84;
+}
+
+.engineer{
+	color: #E69F54;
+}
+
+.doctor{
+	color: #64D03F;
+}
+
+.marine{
+	color: #5A95F2;
+}
+
+.planet{
+	width:350px;
+	height:400px;
+	background-image:url(img/planet.svg);
+	background-repeat:no-repeat;
+	background-size:contain;
+	float:right;
+	border-radius: 0px 40px 0px 0px;
+}
+
+.rocket{
+	width:330px;
+	height:330px;
+	margin-right:50px;
+	background-size:contain;
+	/*background-image:url(img/rocket.svg);*/
+	background-repeat:no-repeat;
+	float:right;
+  transform: rotate(-45deg);
+}
+
+.main-text{
+	padding:20px 150px;
+}
+
+.page{
+	
+}
+
+.page-blocked{
+	display:none;
+}
+.shipimg{
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:100px;
+    height:100px;
+    display:inline-block;
+    float:left;
+	margin-top:10px;
+    margin-left:10px;
+    margin-right:5px;
+}
+
+.fullbox{
+	width:100%;
+	height:100%;
+}
+
+.ship1{
+    background-image:url(img/ship1.svg);
+}
+
+.ship2{
+    background-image:url(img/ship2.svg);
+}
+
+.ship3{
+    background-image:url(img/ship3.svg);
+}
+
+.radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 7px;
+}
+.radio + label {
+	position: relative;
+	padding: 0 0 0 35px;
+	cursor: pointer;
+}
+.radio + label:before {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #CDD1DA;
+	border-radius: 50%;
+	background: #FFF;
+}
+.radio + label:after {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #9FD468;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+	opacity: 0;
+	transition: .2s;
+}
+.radio:checked + label:after {
+	opacity: 1;
+}
+.radio:focus + label:before {
+	box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+}
+.radio-field{
+	display:inline-grid;
+	width:100%;
+	padding-top: 8px;
+	padding-left: 35%;
+	margin-top: 8px;
+    height: 30px;
+	background-color: #D1E1FA;
+	border-radius: 0px 0px 10px 10px;
+	border-top: 1px solid black;
+	float: initial;
+}
+.radio-field input::after{
+	background-color: lawngreen;
+}
+
+.leftpart{
+    width:50%;
+    float:left;
+    display: inline;
+}
+
+.rightpart{
+    width:50%;
+    float:right;
+    display: inline;
+}
+
+.crewimg{
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:35px;
+    height:35px;
+    display:inline-block;
+    float:left;
+    margin-left:5px;
+    margin-right:10px;
+}
+
+.teamimg{
+    width: 20px;
+    height: 20px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    display:inline-block;
+    float:left;
+    margin-left:5px;
+    margin-right:10px;
+}
+
+.captain1{
+    background-image:url(img/captain1.svg);
+}
+
+.captain2{
+    background-image:url(img/captain2.svg);
+}
+
+.doctor1{
+    background-image:url(img/doctor1.svg);
+}
+
+.doctor2{
+    background-image:url(img/doctor2.svg);
+}
+
+.engineer1{
+    background-image:url(img/engineer1.svg);
+}
+
+.engineer2{
+    background-image:url(img/engineer2.svg);
+}
+
+.marine1{
+    background-image:url(img/marine1.svg);
+}
+
+.marine2{
+    background-image:url(img/marine2.svg);
+} 
+
+.rightCheckbox{
+    float:right;
+    margin-right: 7px;
+    width: 7%;
+}
+
+.fixed-height{
+	height:200px;
+}
+
+
+
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #FFFFFF;
+  border: 2px solid black;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #FFFFFF;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+	width:8px;
+	height:12px;
+	margin-left:3px;
+  border: solid #73E24D;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,292 @@
+<html>
+	<head>
+		<title> Space Oddity </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="site-body">
+			<nav class="site-nav">
+				<p><img class="navimg navimg-clicked" src="img/1.svg"></p>
+				<p><img class="navimg" src="img/2.svg"></p>
+				<p><img class="navimg" src="img/3.svg"></p>
+				<p><img class="navimg" src="img/4.svg"></p>
+			</nav>
+			
+			
+			<div class="site-main">
+			
+			<!--					PAGE 1 - MAIN								-->
+				<div class="page">
+                                                
+					<div class="leftpart">
+						
+						<dl class="block">
+							<dd class="underline">
+								<div class="block-text margin">
+									<h3>Статус</h3>
+									<button class="inactiveBtn" id="LetsGo" onClick="rocket.launch()">Поехали!</button>
+								</div>
+							</dd>
+							<ul class="stats" id="statsRocket">
+								<li >Ракета выбрана</li>
+							</ul>
+							<ul class="stats" id="statsCrew">
+								<li>Команда собрана </li>
+							</ul>
+							<ul class="stats" id="statsWeather">
+								<li>Погода - ок </li>
+							</ul>
+						</dl>
+						
+						
+						
+						<dl class="block">
+							<dd class="underline">
+								<div class="block-text margin">
+									<h3>Погодные условия</h3>
+								</div>
+							</dd>
+							<dd class="block-text">
+								<div class="block-list" id="mainWeather">
+									
+								</div>
+							</dd>
+						</dl>
+						
+						<dl class="block">
+							<dd class="underline">
+								<div class="block-text margin">
+								<h3>Экипаж</h3>
+								</div>
+							</dd>
+							<dd class="block-text">
+								<div class="block-list" id="mainpageCrew">
+									<span class='margin'> Экипаж не собран</span>
+								</div>
+							</dd>
+						</dl>
+                                                    
+					</div>
+                                    
+					<div class="rightpart">
+						<div class="planet"></div>
+						<div id="mainRocket" class="rocket"></div>
+					</div>
+						
+				</div>
+					
+				
+				<!--					PAGE 2 - SHIP								-->
+			
+				<div class="page page-blocked">
+										
+					<h1 class="main-text">Выбор корабля</h1>
+					
+					<dl class="block" style="width:50%" id="currShip">
+						<div class="underline">
+							<div class="block-text margin">
+								<h3>Корабль</h3>
+								<button class="activeBtn" id="1" onclick="changeShips()" id='id'>Собрать ракету</button>
+							</div> 
+						</div>
+
+						<dd class="block-text">
+							<div class="shipimg margin"><img class="fullbox shipimg" src="img/ship1.svg" id="rocket-icon"></div>
+							<div class="block-list-rocket margin">
+								<div><span class="left-text margin">Имя</span><span class="right margin" id="rocket-name">Урског-123</span></div>
+								<div><span class="left-text margin">Скорость</span><span class="right-text margin" id="rocket-speed">6 км\c</span></div>
+								<div><span class="left-text margin">Экипаж</span><span class="right-text margin" id="rocket-capacity">4</span></div>
+							</div>
+						</dd> 
+
+					</dl>  
+					
+					<dl class="block block-ship">
+						<dd class="block-text">
+							<div class="shipimg margin"><img class="fullbox shipimg" src="img/ship1.svg"></div>
+							<div class="block-list-rocket margin">
+								<div class="underline"><span class="left-text margin">Имя</span><span class="right-text margin" id="name1">Урског-123</span></div>
+								<div class="underline"><span class="left-text margin">Скорость</span><span class="right-text margin" id="speed1">6 км\c</span></div>
+								<div><span class="left-text margin">Экипаж</span><span class="right-text margin" id="capacity1">4</span></div>
+							</div>
+						</dd>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" checked id="radio1" value="1" /><label for="radio1">Выбрать</label>
+						</div>
+					</dl>
+					
+					<dl class="block block-ship">
+						<dd class="block-text">
+							<div class="shipimg margin"><img class="fullbox shipimg" src="img/ship2.svg"></div>
+							<div class="block-list-rocket margin">
+								<div class="underline"><span class="left-text margin">Имя</span><span class="right-text margin" id="name2">Ястреб-321</span></div>
+								<div class="underline"><span class="left-text margin">Скорость</span><span class="right-text margin" id="speed2">7 км\c</span></div>
+								<div><span class="left-text margin">Экипаж</span><span class="right-text margin" id="capacity2">3</span></div>
+							</div>
+						</dd>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio2" value="2" /><label for="radio2">Выбрать</label>
+						</div>
+					</dl>
+					
+					<dl class="block block-ship">
+						<dd class="block-text">
+							<div class="shipimg margin"><img class="fullbox shipimg" src="img/ship3.svg"></div>
+							<div class="block-list-rocket margin">
+								<div class="underline"><span class="left-text margin">Имя</span><span class="right-text margin" id="name3">Сокол-345</span></div>
+								<div class="underline"><span class="left-text margin">Скорость</span><span class="right-text margin" id="speed3">8 км\c</span></div>
+								<div><span class="left-text margin">Экипаж</span><span class="right-text margin" id="capacity3">2</span></div>
+							</div>
+						</dd>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio3" value="3" /><label for="radio3">Выбрать</label>
+						</div>
+					</dl>
+				</div>
+					
+				<!--					PAGE 3 - TEAM								-->
+				
+				<div class="page page-blocked">
+					<h1 class="main-text">Cбор команды</h1>
+											
+					<div class="leftpart">
+					
+						<dl class="block fixed-height">
+													
+							<div class="underline">
+								<div class="block-text margin">
+									<h3>Команда</h3>
+										<button id="crewButton" class="inactiveBtn" onclick="TeamBuilding()">Готово</button>
+								</div>
+							</div>
+							<dd class="block-text block-list">
+								<div class="margin"><span class="left-text captain">Капитан</span><span class="right-text"><div class="teamimg captain1" id="captain1"></div> <div id="captain2" class="teamimg captain2"></div> </span></div>
+								<div class="margin"><span class="left-text engineer">Борт инженер</span><span class="right-text"><div id="engineer1" class="teamimg engineer1"></div> <div id="engineer2" class="teamimg engineer2"></div></span></div>
+								<div class="margin"><span class="left-text doctor">Врач</span><span class="right-text"><div id="doctor1" class="teamimg doctor1"></div> <div id="doctor2" class="teamimg doctor2"></div></span></div>
+								<div class="margin"><span class="left-text marine">Космодесантник</span><span class="right-text"><div id="marine1" class="teamimg marine1"></div> <div id="marine2" class="teamimg marine2"></div></span></div>
+							</dd>
+						</dl>
+												
+						<dl class="block">
+							<dd class="block-text margin underline">
+								<h3 class="captain">Капитан</h3>
+							</dd>
+							<dd class="block-text block-list">
+								<div class="underline margin"><div class="crewimg captain1"></div>
+									<span class="margin">Константин Константинопольский</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Константин Константинопольский" value="1" name="captain">
+											<span class="checkmark"></span></label></div></div>
+											
+								<div class="underline margin"><div class="crewimg captain2"></div>
+									<span class="margin">Слава Верещак</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Слава Верещак" value="2" name="captain">
+											<span class="checkmark"></span></label></div></div>
+							</dd>
+						</dl>
+												
+						<dl class="block">
+							<dd class="block-text margin underline">
+								<h3 class="doctor">Врач</h3>
+							</dd>
+							<dd class="block-text block-list">
+								<div class="underline margin"><div class="crewimg doctor1"></div>
+									<span class="margin">Егор Тихонов</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Егор Тихонов" value="1" name="doctor">
+											<span class="checkmark"></span></label></div></div>
+											
+								<div class="underline margin"><div class="crewimg doctor2"></div>
+									<span class="margin">Екатерина Овсейко</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Екатерина Овсейко" value="2" name="doctor">
+											<span class="checkmark"></span></label></div></div>
+							</dd>
+						</dl>
+												
+					</div>
+											
+											
+											
+					<div class="rightpart">
+												
+						<dl class="block ship fixed-height">
+							<div class="underline">
+								<div class="block-text margin">
+									<h3>Корабль</h3>
+								</div> 
+							</div>
+							<dd class="block-text">
+								<div class="shipimg margin"><img id="rocket-icon" class="fullbox shipimg" src="img/blank.png"></div>
+									<div class="block-list-rocket margin">
+										<div><span class="left-text margin">Имя</span><span class="right-text margin" id="rocket-name"></span></div>
+										<div><span class="left-text margin">Скорость</span><span class="right-text margin" id="rocket-speed"></span></div>
+										<div><span class="left-text margin">Экипаж</span><span class="right-text margin" id="rocket-capacity"></span></div>
+									</div>
+							</dd> 
+						</dl>  
+												
+						<dl class="block">
+							<dd class="block-text margin underline">
+								<h3 class="engineer">Борт инженер</h3>
+							</dd>
+							<dd class="block-list block-text ">
+								<div class="underline margin"><div class="crewimg engineer1"></div>
+									<span class="margin">Дима Сергеев</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Дима Сергеев" value="1" name="engineer">
+											<span class="checkmark"></span></label></div></div>
+								<div class="underline margin"><div class="crewimg engineer2"></div>
+									<span class="margin">Данил Шмырин</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Данил Шмырин" value="2" name="engineer">
+											<span class="checkmark"></span></label></div></div>
+							</dd>
+						</dl>
+												
+						<dl class="block">
+							<dd class="block-text margin underline">
+								<h3 class="marine">Космодесантник</h3>
+							</dd>
+							<dd class="block-text block-list">
+								<div class="underline margin"><div class="crewimg marine1"></div>
+									<span class="margin">Илон Маск</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Илон Маск" value="1" name="marine">
+											<span class="checkmark"></span></label></div></div>
+											
+								<div class="underline margin"><div class="crewimg marine2"></div>
+									<span class="margin">Рома Кетрис</span><div class="rightCheckbox">
+										<label class="container check"><input type="checkbox" class="crewdetails" id="Рома Кетрис" value="2" name="marine">
+											<span class="checkmark"></span></label></div></div>
+							</dd>
+						</dl>
+												
+					</div>
+				</div>
+					
+				<!--					PAGE 4 - WEATHER								-->
+				<div class="page page-blocked">
+					<h1 class="main-text">Проверка погодных условий</h1>
+					<div class="leftpart">
+						<dl class="block">
+							<dd class="underline">
+								<div class="block-text margin">
+									<h3>Погодные условия</h3>
+									<button class="activeBtn" onClick="WeatherCheck(this);">Проверить</button>
+								</div>
+							</dd>
+							<dd class="block-text">
+								<div class="block-list" id="weatherPage">
+									<div class="underline"><span class="left-text margin">Локация</span><span class="right-text margin"> <input type="text" id="TakeoffSpot"> </span></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+			
+			
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src='script.js'></script>
+	</body>
+</html>
